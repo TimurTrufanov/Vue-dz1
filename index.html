@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Vue homework</title>
+</head>
+
+<body>
+<div id="app">
+    <h1>Vue homework №1</h1>
+    <h1>Vue App</h1>
+    <div>{{ message }}</div>
+    <button @click="changeMessage">Change</button>
+
+    <some-component></some-component>
+
+    <form action="">
+        <label> Введите имя
+            <input type="text" v-model="name">
+        </label>
+        <label> Введите фамилию
+            <input type="text" v-model="surname">
+        </label>
+        <button @click.prevent="fillValues">Fill Inputs</button>
+    </form>
+    <div>Имя: {{name}}</div>
+    <div>Фамилия: {{surname}}</div>
+    <div>{{counter}}</div>
+    <button @click="decrement">-</button>
+    <button @click="increment">+</button>
+    <hr>
+    <h3>{{store.globalMassage}}</h3>
+    <hr>
+    <button @click="changeGlobalMassage">Change global massage</button>
+</div>
+
+<div id="another-app">
+    <h2>Another Vue App</h2>
+    <p>{{ message }}</p>
+    <button @click="updateMessage">Update Message</button>
+    <hr>
+    <button @click="changeGlobalMassage">Change global massage</button>
+</div>
+<!--<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>-->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./js/main.js" type="module"></script>
+</body>
+</html>
